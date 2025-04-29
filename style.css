@@ -1,0 +1,304 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    color: #1abc9c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #16a085;
+}
+
+/* Hero Section */
+.hero {
+    position: relative; /* Ensures the pseudo-element is positioned relative to the hero section */
+    background: #0f1f24;
+    color: white;
+    padding: 100px 0;
+    display: flex; /* Aligns the container and hero-image side by side */
+    justify-content: space-between; /* Adds space between the container and image */
+    align-items: center; /* Vertically aligns content */
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    overflow: hidden; /* Ensures the pseudo-element doesn't overflow the hero section */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://images.pexels.com/photos/16313660/pexels-photo-16313660/free-photo-of-photographer-working-on-wacom-tablet-and-laptop-on-desk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) no-repeat center center/cover;
+    filter: blur(8px); /* Applies the blur effect */
+    z-index: 1; /* Places the pseudo-element behind the content */
+}
+
+.hero .container,
+.hero-image {
+    position: relative;
+    z-index: 2; /* Ensures the content is above the blurred background */
+}
+
+/* Navigation Bar */
+.navbar {
+    padding: 15px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1abc9c;
+}
+
+.navbar-brand:hover {
+    color: #16a085;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    margin: 0 10px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1abc9c;
+}
+
+.navbar-nav .nav-link.active {
+    color: #1abc9c;
+    font-weight: bold;
+}
+
+/* General Section Borders */
+section {
+    border: 1px solid #ddd; /* Light gray border for all sections */
+    border-radius: 10px; /* Adds rounded corners */
+    margin-bottom: 30px; /* Adds spacing between sections */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better visual appeal */
+    overflow: hidden; /* Ensures content stays within the border */
+}
+
+/* About Section */
+#about {
+    padding: 50px 0;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#about h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* About Section Image */
+#about img {
+    border-radius: 15px; /* Smoothens the edges with rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better visual appeal */
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px 0;
+    background: url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+    color: white;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+#skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Add a dark overlay for better text visibility */
+    z-index: 1;
+}
+
+#skills .container {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+#skills h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1abc9c;
+}
+
+#skills h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.skills-bar div {
+    background: #ddd;
+    height: 18px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skills-bar span {
+    display: block;
+    height: 100%;
+    background: #1abc9c;
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Services Section */
+#services {
+    padding: 50px 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+}
+
+#services h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#services h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1abc9c;
+}
+
+#services p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 50px 0;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+#portfolio h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#portfolio img {
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#portfolio img:hover {
+    transform: scale(1.05);
+}
+
+/* Stats Section */
+#stats {
+    padding: 30px 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+}
+
+#stats div {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#stats strong {
+    font-size: 2rem;
+    color: #1abc9c;
+}
+
+/* Blog Section */
+#blog {
+    padding: 50px 0;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+#blog h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#blog h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #1abc9c;
+}
+
+#blog p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+#blog img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Section */
+footer {
+    padding: 40px 0;
+    background: #0f1f24;
+    color: white;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+footer h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1abc9c;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+footer .icon-bar i {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+footer .icon-bar i:hover {
+    color: #1abc9c;
+}
